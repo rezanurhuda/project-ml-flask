@@ -1,2 +1,1 @@
-# project-ml-flask
-Tugas final project mata kuliah Machine Learning
+# Tugas Final Project Machine Learning Framework Flask
