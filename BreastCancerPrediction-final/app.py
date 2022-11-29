@@ -15,6 +15,11 @@ q = ""
 
 @app.route("/")
 def loadPage():
+	return render_template('tes.html', query="")
+
+
+@app.route("/start")
+def loadMainPage():
 	return render_template('home.html', query="")
 
 
