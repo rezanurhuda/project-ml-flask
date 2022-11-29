@@ -26,14 +26,8 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('source/background.jpg');
+  background-image: url('{{ url_for('static', filename='source/background.jpg') }}');
   min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -108,36 +102,36 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center flex items-center" style="margin-left: 170px;" >
     <div class="w3-col m3 flex items-center">
-      <img src="source\fian.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Muhamad Sultan Jodi Perwira
+      <img src="{{ url_for('static', filename='source/jodi.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div>Muhamad Sultan Jodi Perwira</div>
     </div>
 
     <div class="w3-col m3 flex items-center">
-      <img src="source\jay.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Alfian Putra Setyawan
+      <img src="{{ url_for('static', filename='source/fian.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div></div>Alfian Putra Setyawan
     </div>
 
     <div class="w3-col m3 flex items-center">
-      <img src="source\fahmi.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Hanif Nurul Fahmi
+      <img src="{{ url_for('static', filename='source/fahmi.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div></div>Hanif Nurul Fahmi
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section" style="margin-left: 170px;">
     <div class="w3-col m3 flex items-center">
-      <img src="source\jodi.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Farid Reza Nurhuda
+      <img src="{{ url_for('static', filename='source/jay.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div></div>Farid Reza Nurhuda
     </div>
 
     <div class="w3-col m3 flex items-center">
-      <img src="source\nadya.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Nadya Mumtazah
+      <img src="{{ url_for('static', filename='source/nadya.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div></div>Nadya Mumtazah
     </div>
 
     <div class="w3-col m3 flex items-center">
-      <img src="source\maya.png" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"> <div></div>Maya Nurul Nikmah
+      <img src="{{ url_for('static', filename='source/maya.png') }}" alt="image" height="70" width="70" onclick="onClick(this)" class="w3-hover-opacity"></img> <div></div>Maya Nurul Nikmah
 </div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
+    <img id="image" class="w3-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
@@ -146,7 +140,7 @@ body, html {
 <script>
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
+  document.getElementById("image").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
