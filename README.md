@@ -15,7 +15,7 @@ Perkenalkan kami dari kelompok (gatau ke-berapa) Machine Learning kelas A disini
 <br>
 `git commit -m '(message)'`
 <br>
-`git push origin (your branch)`
+`git push origin (your branch name)`
 
 # How To run
 ### 1. Install all the requirements
