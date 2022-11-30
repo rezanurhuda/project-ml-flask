@@ -1,6 +1,8 @@
 # Tugas Final Project Machine Learning Framework Flask 🌶️
 Perkenalkan kami dari kelompok (gatau ke-berapa) Machine Learning kelas A disini hasil final project kami dengan algoritma clustering memprediksi kanker payudara.
 
+#### Take a look at our <a href='https://colab.research.google.com/drive/1l5ma8tdV_AvvoYgPmHg3NP6OTMvFa4h_?usp=sharing#scrollTo=gPxMBHbJrShm'>Model</a>
+
 # How To Contribute 
 ### 1. Clone The Repository
 `git clone https://github.com/rezanurhuda/project-ml-flask.git`
