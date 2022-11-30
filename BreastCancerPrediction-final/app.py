@@ -45,9 +45,9 @@ def getCluster():
 
         if float(result) == 0:
             prediction = 'Tidak Kanker'
-        elif float(result) == 1:
-            prediction = 'Berpotensi Kanker'
         elif float(result) == 2:
+            prediction = 'Berpotensi Kanker'
+        elif float(result) == 1:
             prediction = 'Kanker'
 
     return render_template('getCluster.html',prediction=prediction)
